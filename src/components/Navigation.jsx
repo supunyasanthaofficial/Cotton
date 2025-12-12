@@ -29,9 +29,6 @@ const Navigation = () => {
           <div className="flex items-center gap-2">
             <Link to="/" onClick={scrollToTop}>
               <img src={logo} alt="Cotton Clouds Logo" className="h-10 w-10" />
-              <span className="text-xl font-bold text-gray-800 ml-2">
-                COTTON CLOUDS
-              </span>
             </Link>
           </div>
 
