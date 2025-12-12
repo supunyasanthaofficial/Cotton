@@ -8,6 +8,7 @@ import {
   FaQuestionCircle,
   FaTruck,
   FaExchangeAlt,
+  FaChevronDown,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -19,26 +20,13 @@ const Contact = () => {
     message: "",
   });
 
-  const faqItems = [
-    {
-      question: "What are your shipping options?",
-      answer:
-        "We offer standard (5-7 business days), express (2-3 business days), and overnight shipping.",
-      icon: <FaTruck className="text-blue-500" />,
-    },
-    {
-      question: "What is your return policy?",
-      answer:
-        "You can return unworn items within 30 days of purchase with original tags attached.",
-      icon: <FaExchangeAlt className="text-green-500" />,
-    },
-    {
-      question: "How can I track my order?",
-      answer:
-        "Track your order using the link in your confirmation email or through your account dashboard.",
-      icon: <FaComment className="text-purple-500" />,
-    },
-  ];
+  const [openFAQs, setOpenFAQs] = useState([false, false, false]);
+
+  const toggleFAQ = (index) => {
+    const newOpenFAQs = [...openFAQs];
+    newOpenFAQs[index] = !newOpenFAQs[index];
+    setOpenFAQs(newOpenFAQs);
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -61,27 +49,23 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-blue-50 to-white">
-      {/* Hero Section */}
-      <div className="bg-linear-to-r from-blue-500 to-purple-500 text-white py-16">
+    <div className="min-h-screen bg-linear-to-b from-white to-white">
+      <div className="bg-linear-to-r from-white to-white text-black py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">Get in Touch</h1>
           <p className="text-xl max-w-3xl mx-auto">
-            "Have a question or feedback? We'd love to hear from you. Fill out
+            Have a question or feedback? We'd love to hear from you. Fill out
             the form below or use one of the other contact methods to reach our
-            team."
+            team.
           </p>
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="border-t-2 border-gray-300 my-8"></div>
-
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Left Column - Contact Form */}
-          <div>
+          <div className="bg-white p-8 rounded-2xl shadow-lg">
             <h2 className="text-3xl font-bold text-gray-800 mb-8 flex items-center">
-              <FaEnvelope className="mr-3 text-blue-500" />
+              {/* <FaEnvelope className="mr-3 text-rose-500" /> */}
               Send us a Message
             </h2>
 
@@ -95,7 +79,7 @@ const Contact = () => {
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition"
                   placeholder="Enter your full name"
                   required
                 />
@@ -111,7 +95,7 @@ const Contact = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition"
                     placeholder="your@email.com"
                     required
                   />
@@ -125,8 +109,8 @@ const Contact = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
-                    placeholder="+1 (234) 567-8900"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition"
+                    placeholder="+94 000-0000"
                   />
                 </div>
               </div>
@@ -140,7 +124,7 @@ const Contact = () => {
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition"
                   placeholder="What is this regarding?"
                   required
                 />
@@ -148,67 +132,57 @@ const Contact = () => {
 
               <div>
                 <label className="block text-gray-700 mb-2 font-medium">
-                  Your Message:
+                  Message:
                 </label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows="5"
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition resize-none"
-                  placeholder="Type your message here..."
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition resize-none"
+                  placeholder="Write your message here..."
                   required
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-linear-to-r from-blue-600 to-purple-600 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-purple-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="w-full bg-linear-to-r from-rose-400 to-rose-500 text-white py-4 px-10 rounded-full font-semibold text-lg transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl hover:from-rose-500 hover:to-rose-600"
               >
                 Send Message
               </button>
             </form>
           </div>
 
-          {/* Right Column - Contact Info & FAQ */}
           <div className="space-y-12">
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <FaComment className="mr-3 text-green-500" />
+                {/* <FaComment className="mr-3 text-blue-500" /> */}
                 Customer Support
               </h3>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <FaEnvelope className="text-blue-500 text-xl" />
+                  <FaEnvelope className="text-red-500 text-xl" />
                   <div>
                     <p className="font-medium">Email:</p>
                     <a
-                      href="mailto:support@cottonclouds.com"
-                      className="text-blue-600 hover:text-blue-800"
+                      href="mailto:support@aura.com"
+                      className="text-black hover:text-blue-800 transition-colors"
                     >
-                      support@cottonclouds.com
+                      support@aura.com
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <FaPhone className="text-green-500 text-xl" />
+                  <FaPhone className="text-red-500 text-xl" />
                   <div>
                     <p className="font-medium">Phone:</p>
                     <a
-                      href="tel:+1254954990"
-                      className="text-blue-600 hover:text-blue-800"
+                      href="tel:+10000000000"
+                      className="text-black hover:text-blue-800 transition-colors"
                     >
-                      +1 (254) 954-990
+                      +94 000-0000
                     </a>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <FaComment className="text-purple-500 text-xl" />
-                  <div>
-                    <p className="font-medium">Live Chat:</p>
-                    <button className="text-blue-600 hover:text-blue-800">
-                      Start Chat with Webmaster
-                    </button>
                   </div>
                 </div>
               </div>
@@ -216,31 +190,46 @@ const Contact = () => {
 
             <div className="bg-white p-8 rounded-2xl shadow-lg">
               <h3 className="text-2xl font-bold text-gray-800 mb-6 flex items-center">
-                <FaMapMarkerAlt className="mr-3 text-red-500" />
+                {/* <FaMapMarkerAlt className="mr-3 text-green-500" /> */}
                 Store Location
               </h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <FaMapMarkerAlt className="text-red-500 mt-1" />
-                  <div>
-                    <p className="font-bold text-lg">
-                      Cotton Clouds Fashion Store
-                    </p>
-                    <p className="text-gray-600">
-                      123 Ocean Beach, New York, NY 10001
-                    </p>
-                  </div>
+              <div className="space-y-6">
+                <div className="mt-4 rounded-lg overflow-hidden shadow-md">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.1841872571663!2d80.67686019731812!3d7.278664776439835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae367be19d02d7d%3A0xfa67bb9a7082d197!2sEVER%20EFFICIENT%20Business%20Management!5e0!3m2!1sen!2slk!4v1765258026244!5m2!1sen!2slk"
+                    width="100%"
+                    height="250"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="EVER EFFICIENT Business Management Location"
+                    className="w-full h-64"
+                  ></iframe>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <FaClock className="text-yellow-500" />
-                  <div>
-                    <p className="font-medium">Operating Hours:</p>
-                    <p className="text-gray-600">
-                      Monday - Friday: 9:00 AM - 8:00 PM
-                    </p>
-                    <p className="text-gray-600">
-                      Saturday - Sunday: 10:00 AM - 6:00 PM
-                    </p>
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
+                    <FaMapMarkerAlt className="text-green-500 mt-1" />
+                    <div>
+                      <p className="font-bold text-lg">
+                        Cotton Clouds Fashion Store
+                      </p>
+                      <p className="text-gray-600">
+                        123 Fashion Ave, New York, NY 10001
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <FaClock className="text-yellow-500" />
+                    <div>
+                      <p className="font-medium">Operating Hours:</p>
+                      <p className="text-gray-600">
+                        Monday - Friday: 9:00 AM - 8:00 PM
+                      </p>
+                      <p className="text-gray-600">
+                        Saturday - Sunday: 10:00 AM - 6:00 PM
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -258,79 +247,110 @@ const Contact = () => {
             returns, and more.
           </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {faqItems.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
+          <div className="max-w-4xl mx-auto space-y-4">
+            <div className="border border-gray-200 rounded-4xl overflow-hidden hover:shadow-md transition-shadow duration-300">
+              <button
+                className="w-full flex justify-between items-center p-6 bg-gray-100 hover:bg-gray-200 transition-colors duration-200 text-left"
+                onClick={() => toggleFAQ(0)}
               >
-                <div className="flex items-center mb-4">
-                  {item.icon}
-                  <h4 className="text-xl font-bold ml-3">{item.question}</h4>
+                <div className="flex items-center">
+                  <FaComment className="text-purple-500 mr-3 text-lg" />
+                  <span className="text-lg font-semibold text-gray-800">
+                    How can I track my order?
+                  </span>
                 </div>
-                <p className="text-gray-600">{item.answer}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <button className="bg-linear-to-r from-blue-500 to-cyan-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-blue-600 hover:to-cyan-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
-              GET IN TOUCH VIA SUPPORT
-            </button>
-            <button className="bg-linear-to-r from-purple-500 to-pink-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-purple-600 hover:to-pink-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
-              SALES AND MARKETING
-            </button>
-            <button className="bg-linear-to-r from-green-500 to-emerald-500 text-white py-4 px-6 rounded-lg font-semibold text-lg hover:from-green-600 hover:to-emerald-600 transform hover:-translate-y-1 transition-all duration-300 shadow-lg">
-              VISIT OUR STORE LOCATIONS
-            </button>
-          </div>
-        </div>
-
-        <div className="mt-20 bg-linear-to-r from-blue-50 to-purple-50 p-8 rounded-2xl">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-800 mb-4">
-              Join Our Newsletter
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Get exclusive updates on new arrivals, special offers, and fashion
-              tips delivered straight to your inbox.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 items-center">
-            <div className="md:col-span-2">
-              <div className="flex flex-col md:flex-row gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email address"
-                  className="grow px-6 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+                <FaChevronDown
+                  className={`text-gray-500 text-lg transition-transform duration-300 ${
+                    openFAQs[0] ? "rotate-180" : ""
+                  }`}
                 />
-                <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
-                  Subscribe
-                </button>
-              </div>
-              <p className="text-sm text-gray-500 mt-3">
-                By subscribing, you agree to our Privacy Policy and consent to
-                receive updates.
-              </p>
+              </button>
+              {openFAQs[0] && (
+                <div className="px-6 pb-6 pt-2 bg-white border-t border-gray-100">
+                  <p className="text-gray-600">
+                    Track your order using the link in your confirmation email
+                    or through your account dashboard. You'll receive tracking
+                    information once your order has shipped. For international
+                    orders, tracking updates may take 24-48 hours to appear.
+                  </p>
+                </div>
+              )}
             </div>
 
-            <div className="text-center md:text-right">
-              <p className="font-bold text-lg mb-2">Follow Us</p>
-              <div className="flex justify-center md:justify-end space-x-4">
-                <button className="w-10 h-10 bg-blue-500 text-white rounded-full hover:bg-blue-600">
-                  F
-                </button>
-                <button className="w-10 h-10 bg-pink-500 text-white rounded-full hover:bg-pink-600">
-                  I
-                </button>
-                <button className="w-10 h-10 bg-blue-400 text-white rounded-full hover:bg-blue-500">
-                  T
-                </button>
-                <button className="w-10 h-10 bg-red-500 text-white rounded-full hover:bg-red-600">
-                  Y
-                </button>
-              </div>
+            <div className="border border-gray-200 rounded-4xl overflow-hidden hover:shadow-md transition-shadow duration-300">
+              <button
+                className="w-full flex justify-between items-center p-6 bg-gray-100 hover:bg-gray-200 transition-colors duration-200 text-left"
+                onClick={() => toggleFAQ(1)}
+              >
+                <div className="flex items-center">
+                  <FaExchangeAlt className="text-green-500 mr-3 text-lg" />
+                  <span className="text-lg font-semibold text-gray-800">
+                    What is your return policy?
+                  </span>
+                </div>
+                <FaChevronDown
+                  className={`text-gray-500 text-lg transition-transform duration-300 ${
+                    openFAQs[1] ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {openFAQs[1] && (
+                <div className="px-6 pb-6 pt-2 bg-white border-t border-gray-100">
+                  <p className="text-gray-600">
+                    You can return unworn items within 30 days of purchase with
+                    original tags attached. Items must be in their original
+                    condition with all packaging. Refunds will be processed
+                    within 5-10 business days after we receive the return. Sale
+                    items are final sale unless defective.
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div className="border border-gray-200 rounded-4xl overflow-hidden hover:shadow-md transition-shadow duration-300">
+              <button
+                className="w-full flex justify-between items-center p-6 bg-gray-100 hover:bg-gray-200 transition-colors duration-200 text-left"
+                onClick={() => toggleFAQ(2)}
+              >
+                <div className="flex items-center">
+                  <FaTruck className="text-blue-500 mr-3 text-lg" />
+                  <span className="text-lg font-semibold text-gray-800">
+                    How long does shipping take?
+                  </span>
+                </div>
+                <FaChevronDown
+                  className={`text-gray-500 text-lg transition-transform duration-300 ${
+                    openFAQs[2] ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              {openFAQs[2] && (
+                <div className="px-6 pb-6 pt-2 bg-white border-t border-gray-100">
+                  <p className="text-gray-600">
+                    We offer multiple shipping options:
+                    <ul className="mt-2 space-y-1 ml-4 list-disc text-gray-600">
+                      <li>
+                        <span className="font-medium">Standard Shipping:</span>{" "}
+                        5-7 business days
+                      </li>
+                      <li>
+                        <span className="font-medium">Express Shipping:</span>{" "}
+                        2-3 business days
+                      </li>
+                      <li>
+                        <span className="font-medium">Overnight Shipping:</span>{" "}
+                        Next business day (order before 2 PM EST)
+                      </li>
+                      <li>
+                        <span className="font-medium">
+                          International Shipping:
+                        </span>{" "}
+                        7-14 business days depending on destination
+                      </li>
+                    </ul>
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
