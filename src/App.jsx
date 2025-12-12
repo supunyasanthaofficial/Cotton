@@ -8,6 +8,7 @@ import Sales from "./pages/Sales";
 
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/fashions" element={<Fashions />} />
           <Route path="/new-arrivals" element={<NewArrivals />} />{" "}
           <Route path="/sales" element={<Sales />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>
