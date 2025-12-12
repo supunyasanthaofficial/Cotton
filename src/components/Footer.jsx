@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaYoutube,
-  FaHeart,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -14,7 +8,7 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8">
           <div>
             <h3 className="text-2xl font-bold mb-4">COTTON CLOUDS</h3>
-            <p className="text-black mb-4">
+            <p className="text-black font-bold mb-4">
               Discover Clothing made to make you smile - soft fabrics, comfy
               fits, and stylish pieces for everyone in the family. Cute, cozy,
               and cafted with love.
@@ -75,18 +69,27 @@ const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-xl font-bold mb-4">Contact Info</h4>
-            <div className="space-y-2 text-black">
-              <p>123 Ocean Beach, New York, NY 10001</p>
-              <p>support@cottonclouds.com</p>
-              <p>+1 (254) 954-990</p>
-              <p>Mon-Fri: 9am-8pm EST</p>
+            <h4 className="text-xl font-bold mb-4">Join Our Newsletter</h4>
+            <p className="text-xl font-semibold mb-4">
+              Get 10% off your first order
+            </p>
+            <div className="md:col-span-2">
+              <div className="flex flex-col md:flex-row gap-4">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                  className="grow px-6 py-3 border border-[#A70011] bg-white rounded-4xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
+                />
+                <button className="bg-[#a70011] text-white px-8 py-3 rounded-4xl font-semibold hover:bg-blue-700 transition-colors duration-300">
+                  Subscribe
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-black">
+          <p className="text-black font-semibold">
             2025 © All Right Reserved | Cotton Clouds | Designed & Developed by
             EVER EFFCIENT Business Management (Pvt) Ltd.
           </p>
