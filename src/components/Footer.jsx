@@ -87,11 +87,8 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-black">
-            © 2024 Cotton Clouds. All Rights Reserved | Made with{" "}
-            <FaHeart className="inline text-red-500" /> by Cotton Clouds Team
-          </p>
-          <p className="text-black text-sm mt-2">
-            Privacy Policy | Terms of Service | Cookie Policy
+            2025 © All Right Reserved | Cotton Clouds | Designed & Developed by
+            EVER EFFCIENT Business Management (Pvt) Ltd.
           </p>
         </div>
       </div>
