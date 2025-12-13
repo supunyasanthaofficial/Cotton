@@ -1,4 +1,4 @@
-import React from "react";
+// import logo from "../assets/images/logo.png";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
@@ -6,8 +6,13 @@ const Footer = () => {
     <footer className="bg-[#e3abaa] text-black mt-20">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
+          {/* <img
+            src={logo}
+            alt="cotton cloud logo"
+            className="h-10 w-auto mr-3"
+          /> */}
+
           <div>
-            <h3 className="text-2xl font-bold mb-4">COTTON CLOUDS</h3>
             <p className="text-black font-bold mb-4">
               Discover Clothing made to make you smile - soft fabrics, comfy
               fits, and stylish pieces for everyone in the family. Cute, cozy,
