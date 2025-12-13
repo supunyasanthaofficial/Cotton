@@ -93,10 +93,19 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-black font-semibold">
-            2025 © All Right Reserved | Cotton Clouds | Designed & Developed by
-            EVER EFFCIENT Business Management (Pvt) Ltd.
+        <div className="max-w-6xl mx-auto mt-6 pt-6 border-t border-black text-xl-center font-semibold text-center text-black text-sm">
+          <p>
+            &copy; 2025 @ All Rights Reserved | Cotton Cloud | Designed &
+            Developed by{" "}
+            <a
+              href="https://everefficient.lk/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-black hover:text-red-500 font-medium  transition duration-300"
+            >
+              EVER EFFICIENT Business Management (Pvt) Ltd
+            </a>
+            .
           </p>
         </div>
       </div>
