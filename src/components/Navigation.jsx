@@ -38,7 +38,7 @@ const Navigation = () => {
                 key={index}
                 to={item.path}
                 onClick={scrollToTop}
-                className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 hover:underline"
+                className="text-gray-700 hover:text-blue-600 font-bold transition duration-300 hover:underline"
               >
                 {item.name}
               </Link>
