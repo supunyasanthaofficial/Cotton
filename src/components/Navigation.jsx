@@ -11,7 +11,6 @@ const Navigation = () => {
     { name: "Fashions", path: "/fashions" },
     { name: "New Arrivals", path: "/new-arrivals" },
     { name: "Sales", path: "/sales" },
-    { name: "Contact", path: "/contact" },
   ];
 
   const scrollToTop = () => {
@@ -26,26 +25,48 @@ const Navigation = () => {
     <nav className="bg-[#ffddc6] shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
+          {/* Logo Section */}
           <div className="flex items-center gap-2">
             <Link to="/" onClick={scrollToTop}>
               <img src={logo} alt="Cotton Clouds Logo" className="h-10 w-10" />
             </Link>
           </div>
 
+          {/* Desktop Navigation - Menu Items (Centered) */}
           <div className="hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {menuItems.map((item, index) => (
               <Link
                 key={index}
                 to={item.path}
                 onClick={scrollToTop}
-                className="text-gray-700 hover:text-blue-600 font-bold transition duration-300 hover:underline"
+                className="text-gray-700 hover:text-[#a70011] font-bold transition duration-300 hover:underline"
               >
                 {item.name}
               </Link>
             ))}
           </div>
 
-          <div className="md:hidden">
+          {/* Desktop - Contact Button (Right Side) */}
+          <div className="hidden md:flex items-center">
+            <Link
+              to="/contact"
+              onClick={scrollToTop}
+              className="bg-linear-to-r from-[#a70011] to-[#d40015] text-white px-6 py-2 rounded-full font-bold hover:from-[#8a000e] hover:to-[#b30012] transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+            >
+              Contact Us
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <div className="md:hidden flex items-center space-x-4">
+            <Link
+              to="/contact"
+              onClick={scrollToTop}
+              className="bg-linear-to-r from-[#a70011] to-[#d40015] text-white px-4 py-2 rounded-full font-bold text-sm hover:from-[#8a000e] hover:to-[#b30012] transition-all duration-300"
+            >
+              Contact
+            </Link>
+
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="text-gray-700 focus:outline-none"
@@ -76,6 +97,7 @@ const Navigation = () => {
           </div>
         </div>
 
+        {/* Mobile Menu Dropdown */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200">
             <div className="flex flex-col space-y-4">
@@ -84,11 +106,19 @@ const Navigation = () => {
                   key={index}
                   to={item.path}
                   onClick={scrollToTop}
-                  className="text-gray-700 hover:text-blue-600 font-medium transition duration-300 py-2 hover:underline"
+                  className="text-gray-700 hover:text-[#a70011] font-medium transition duration-300 py-2 hover:underline"
                 >
                   {item.name}
                 </Link>
               ))}
+
+              <Link
+                to="/contact"
+                onClick={scrollToTop}
+                className="bg-linear-to-r from-[#a70011] to-[#d40015] text-white px-6 py-3 rounded-full font-bold text-center hover:from-[#8a000e] hover:to-[#b30012] transition-all duration-300 mt-4"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         )}
