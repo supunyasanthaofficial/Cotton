@@ -1,5 +1,11 @@
 import Header from "../components/Header";
 
+import Header1 from "../assets/images/Header1.png";
+import Header2 from "../assets/images/Header2.png";
+import Header3 from "../assets/images/Header3.png";
+import Header4 from "../assets/images/Header4.png";
+import Header5 from "../assets/images/Header5.png";
+
 import brand1 from "../assets/images/brand1.png";
 import brand2 from "../assets/images/brand2.png";
 
@@ -24,7 +30,11 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
+      <Header
+        images={[Header1, Header2, Header3, Header4, Header5]}
+        autoSlide={true}
+        height="h-[600px] md:h-[800px]"
+      />
 
       <section className="max-w-7xl mx-auto px-4 py-12 text-center">
         <h2 className="text-3xl md:text-4xl font-bold tracking-wide">
