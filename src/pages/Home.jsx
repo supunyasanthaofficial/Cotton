@@ -8,8 +8,7 @@ import Header5 from "../assets/images/Header5.png";
 
 import brand1 from "../assets/images/brand1.png";
 import brand2 from "../assets/images/brand2.png";
-
-// import bag from "../assets/images/bag.png";
+import bag from "../assets/images/bag.png";
 
 import fc1 from "../assets/images/fc1.jpg";
 import fc2 from "../assets/images/fc2.png";
@@ -125,6 +124,76 @@ const Home = () => {
                 Explore Collection
               </button>
             </div>
+          </div>
+        </div>
+      </section>
+      {/* Deal of the Day */}
+      <section className="max-w-7xl mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden">
+          {/* LEFT SIDE */}
+          <div className="bg-[#f36f6f] p-10 flex flex-col justify-center">
+            <h2 className="text-white text-3xl md:text-4xl font-bold mb-8">
+              Deal Of The Day
+            </h2>
+
+            <div className="bg-white rounded-2xl p-6 relative max-w-md">
+              {/* SALE LABEL */}
+              <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden pointer-events-none">
+                <span className="absolute top-5 -right-12 w-40 text-center bg-red-700 text-white text-xs font-bold py-1 rotate-45 border border-white shadow-sm">
+                  SALE
+                </span>
+              </div>
+
+              <h3 className="font-bold text-lg mb-2">Ladies Bags</h3>
+
+              <p className="mb-3">
+                <span className="line-through text-gray-400 mr-2">$250.00</span>
+                <span className="font-bold text-black">$150.00</span>
+              </p>
+
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Complete your look with the cutest little details! From sparkly
+                earrings to trendy bags, our accessories add the perfect touch
+                of charm to every outfit.
+              </p>
+
+              <button className="mt-4 px-6 py-2 bg-red-700 text-white rounded-full text-sm font-semibold hover:bg-red-800 transition">
+                Shop Now
+              </button>
+
+              {/* TIMER */}
+              <div className="flex gap-5 mt-6">
+                <div className="text-center">
+                  <div className="bg-[#f36f6f] text-white font-bold text-xl rounded-xl px-4 py-2">
+                    10
+                  </div>
+                  <p className="text-xs mt-1">DAYS</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="bg-[#f36f6f] text-white font-bold text-xl rounded-xl px-4 py-2">
+                    02
+                  </div>
+                  <p className="text-xs mt-1">HOUR</p>
+                </div>
+
+                <div className="text-center">
+                  <div className="bg-[#f36f6f] text-white font-bold text-xl rounded-xl px-4 py-2">
+                    45
+                  </div>
+                  <p className="text-xs mt-1">MINUTES</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE */}
+          <div className="bg-[#b30018] p-10 flex flex-col border justify-center text-white">
+            <img
+              src={bag}
+              alt="Women Handbag"
+              className="max-w-3xs md:max-w-1xl self-center"
+            />
           </div>
         </div>
       </section>
