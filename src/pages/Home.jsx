@@ -14,6 +14,8 @@ import fc1 from "../assets/images/fc1.jpg";
 import fc2 from "../assets/images/fc2.png";
 import fc3 from "../assets/images/fc3.png";
 import fc4 from "../assets/images/fc4.jpg";
+import TrendingProducts from "../components/TrendingProducts";
+import Discount from "../components/Discount";
 
 const Home = () => {
   const brands = [
@@ -25,6 +27,27 @@ const Home = () => {
     brand2,
     brand1,
     brand2,
+  ];
+
+  const reviews = [
+    {
+      name: "Nethmi Perera",
+      rating: 5,
+      review:
+        "Absolitely love the quality! I ordered a dress and a top, and they both fell super soft and comfortable. The fit was perfect too! Will definitly shop again.",
+    },
+    {
+      name: "Shenaya Fernando",
+      rating: 5,
+      review:
+        "Fast delivery & beautiful packages.My order arrived earlier than expected and packed so nicely. The clothes look even better in real life.Highly recommended.",
+    },
+    {
+      name: "Dilani Jayasekara",
+      rating: 5,
+      review:
+        "The Kid's collection is adorable! i bought a few outfits for my daughter everything is so cute and the fabric is gentie on her skin.She loves them!",
+    },
   ];
 
   return (
@@ -128,73 +151,141 @@ const Home = () => {
         </div>
       </section>
       {/* Deal of the Day */}
-      <section className="max-w-7xl mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 rounded-2xl overflow-hidden">
-          {/* LEFT SIDE */}
-          <div className="bg-[#f36f6f] p-10 flex flex-col justify-center">
-            <h2 className="text-white text-3xl md:text-4xl font-bold mb-8">
-              Deal Of The Day
-            </h2>
+      <section className="max-w-full mx-auto px-4 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 rounded-2xl overflow-hidden shadow-2xl min-h-150 md:min-h-175">
+          <div className="bg-[#f36f6f] p-8 md:p-12 lg:p-16 flex items-center">
+            <div className="w-full max-w-xl mx-auto">
+              <h2 className="text-white text-4xl md:text-5xl font-bold mb-6 md:mb-10">
+                Deal Of The Day
+              </h2>
 
-            <div className="bg-white rounded-2xl p-6 relative max-w-md">
-              {/* SALE LABEL */}
-              <div className="absolute top-0 right-0 w-24 h-24 overflow-hidden pointer-events-none">
-                <span className="absolute top-5 -right-12 w-40 text-center bg-red-700 text-white text-xs font-bold py-1 rotate-45 border border-white shadow-sm">
-                  SALE
-                </span>
-              </div>
-
-              <h3 className="font-bold text-lg mb-2">Ladies Bags</h3>
-
-              <p className="mb-3">
-                <span className="line-through text-gray-400 mr-2">$250.00</span>
-                <span className="font-bold text-black">$150.00</span>
-              </p>
-
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Complete your look with the cutest little details! From sparkly
-                earrings to trendy bags, our accessories add the perfect touch
-                of charm to every outfit.
-              </p>
-
-              <button className="mt-4 px-6 py-2 bg-red-700 text-white rounded-full text-sm font-semibold hover:bg-red-800 transition">
-                Shop Now
-              </button>
-
-              {/* TIMER */}
-              <div className="flex gap-5 mt-6">
-                <div className="text-center">
-                  <div className="bg-[#f36f6f] text-white font-bold text-xl rounded-xl px-4 py-2">
-                    10
-                  </div>
-                  <p className="text-xs mt-1">DAYS</p>
+              <div className="bg-white rounded-2xl p-8 relative shadow-lg">
+                {/* SALE LABEL */}
+                <div className="absolute -top-2 -right-2 w-24 h-24 overflow-hidden pointer-events-none">
+                  <span className="absolute top-5 -right-12 w-40 text-center bg-red-700 text-white text-sm font-bold py-1.5 rotate-45 border border-white shadow-lg">
+                    SALE
+                  </span>
                 </div>
 
-                <div className="text-center">
-                  <div className="bg-[#f36f6f] text-white font-bold text-xl rounded-xl px-4 py-2">
-                    02
-                  </div>
-                  <p className="text-xs mt-1">HOUR</p>
-                </div>
+                <h3 className="font-bold text-2xl mb-3 text-gray-900">
+                  Ladies Bags
+                </h3>
 
-                <div className="text-center">
-                  <div className="bg-[#f36f6f] text-white font-bold text-xl rounded-xl px-4 py-2">
-                    45
+                <p className="mb-4 text-lg">
+                  <span className="line-through text-gray-500 mr-3 text-xl">
+                    $250.00
+                  </span>
+                  <span className="font-bold text-2xl text-red-600">
+                    $150.00
+                  </span>
+                </p>
+
+                <p className="text-gray-700 leading-relaxed mb-6">
+                  Complete your look with the cutest little details! From
+                  sparkly earrings to trendy bags, our accessories add the
+                  perfect touch of charm to every outfit.
+                </p>
+
+                <button className="mt-4 px-8 py-3 bg-red-600 text-white rounded-full text-base font-bold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                  Shop Now
+                </button>
+
+                <div className="flex gap-4 md:gap-6 mt-8 pt-6 border-t border-gray-200">
+                  <div className="text-center flex-1">
+                    <div className="bg-[#f36f6f] text-white font-bold text-2xl md:text-3xl rounded-lg px-4 py-3 shadow-md">
+                      10
+                    </div>
+                    <p className="text-xs md:text-sm mt-2 text-gray-700 font-medium">
+                      DAYS
+                    </p>
                   </div>
-                  <p className="text-xs mt-1">MINUTES</p>
+
+                  <div className="text-center flex-1">
+                    <div className="bg-[#f36f6f] text-white font-bold text-2xl md:text-3xl rounded-lg px-4 py-3 shadow-md">
+                      02
+                    </div>
+                    <p className="text-xs md:text-sm mt-2 text-gray-700 font-medium">
+                      HOURS
+                    </p>
+                  </div>
+
+                  <div className="text-center flex-1">
+                    <div className="bg-[#f36f6f] text-white font-bold text-2xl md:text-3xl rounded-lg px-4 py-3 shadow-md">
+                      45
+                    </div>
+                    <p className="text-xs md:text-sm mt-2 text-gray-700 font-medium">
+                      MINUTES
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* RIGHT SIDE */}
-          <div className="bg-[#b30018] p-10 flex flex-col border justify-center text-white">
-            <img
-              src={bag}
-              alt="Women Handbag"
-              className="max-w-3xs md:max-w-1xl self-center"
-            />
+          {/* RIGHT SIDE - IMAGE WITH TRANSPARENT BACKGROUND */}
+          <div className="bg-linear-to-br from-red-50 to-pink-50 p-8 md:p-12 lg:p-16 flex items-center justify-center">
+            <div className="relative w-full h-full flex items-center justify-center">
+              <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
+                <img
+                  src={bag}
+                  alt="Women Handbag"
+                  className="w-full h-auto object-contain drop-shadow-2xl"
+                  style={{
+                    filter: "drop-shadow(0 10px 30px rgba(0, 0, 0, 0.15))",
+                  }}
+                />
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <TrendingProducts />
+        </div>
+      </section>
+      <section className="max-w-7xl mx-auto px-4 py-20">
+        <h2 className="text-center text-4xl font-bold mb-16">
+          Cutomer Reviews
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+          {reviews.map((item, index) => (
+            <div key={index} className="text-center px-6 relative">
+              <h3 className="font-semibold text-sm mb-4">{item.name}</h3>
+
+              <div className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center mx-auto mb-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 text-black"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z" />
+                </svg>
+              </div>
+
+              <div className="flex justify-center mb-4">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <span
+                    key={i}
+                    className={`text-sm ${
+                      i < item.rating ? "text-orange-400" : "text-gray-300"
+                    }`}
+                  >
+                    ★
+                  </span>
+                ))}
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                "{item.review}"
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section>
+        <div>
+          <Discount />
         </div>
       </section>
     </div>
