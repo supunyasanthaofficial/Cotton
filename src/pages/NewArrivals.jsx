@@ -1,4 +1,3 @@
-import React from "react";
 import Header from "../components/Header";
 
 import B1 from "../assets/images/B1.jpg";
@@ -9,6 +8,7 @@ import B5 from "../assets/images/B5.png";
 import B6 from "../assets/images/B6.jpg";
 
 import Header6 from "../assets/images/Header6.png";
+import NewArrivalsSection from "../components/NewArrivalsSection";
 
 export default function NewArrivals() {
   return (
@@ -124,6 +124,11 @@ export default function NewArrivals() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <NewArrivalsSection />
         </div>
       </section>
     </div>
