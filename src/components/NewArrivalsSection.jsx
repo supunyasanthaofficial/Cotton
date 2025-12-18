@@ -315,7 +315,7 @@ const NewArrivalsSection = () => {
       <div className="flex items-center justify-between mb-10">
         <div className="flex items-center gap-4">
           <div className="w-12 h-1 bg-red-600 rounded-full"></div>
-          <h2 className="font-semibold text-lg">Best Deals</h2>
+          <h2 className="font-semibold text-lg">New Arrivals</h2>
         </div>
         <select className="border p-2 rounded text-sm">
           <option>Sort by</option>
