@@ -222,10 +222,10 @@ const Home = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE - IMAGE WITH TRANSPARENT BACKGROUND */}
           <div className="bg-linear-to-br from-red-50 to-pink-50 p-8 md:p-12 lg:p-16 flex items-center justify-center">
             <div className="relative w-full h-full flex items-center justify-center">
-              <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
+              <div className="relative w-full transform scale-125">
+                {" "}
                 <img
                   src={bag}
                   alt="Women Handbag"
