@@ -1,7 +1,7 @@
-import React from "react";
 import Header from "../components/Header";
 import Header5 from "../assets/images/Header5.png";
 import AboutSection from "../components/AboutSection";
+import WhyChooseUsSection from "../components/WhyChooseUsSection";
 
 export default function About() {
   return (
@@ -13,7 +13,12 @@ export default function About() {
       />
       <section>
         <div>
-          <AboutSection/>
+          <AboutSection />
+        </div>
+      </section>
+      <section>
+        <div>
+          <WhyChooseUsSection/>
         </div>
       </section>
     </div>
