@@ -19,7 +19,7 @@ export default function AboutSection() {
               We Have 5 Years Of Experience <br />
               In Fashion Industry.
             </h2>
-            <p className="text-gray-600 max-w-xl mb-10">
+            <p className="text-gray-600  max-w-lg mb-10">
               Dress your day in cuteness! Explore everyday essentials, stylish
               outfits,and playful designs perfect for every age every moment.
             </p>
