@@ -244,8 +244,8 @@ const Home = () => {
           <TrendingProducts />
         </div>
       </section>
-      <section className="max-w-7xl mx-auto px-4 py-20">
-        <h2 className="text-center text-4xl font-bold mb-16">
+      <section className="max-w-8xl mx-auto px-8 py-30">
+        <h2 className="text-center text-5xl font-bold mb-20">
           Cutomer Reviews
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
