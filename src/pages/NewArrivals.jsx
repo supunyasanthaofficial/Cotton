@@ -19,7 +19,7 @@ export default function NewArrivals() {
         height="h-[600px] md:h-[800px]"
         showContent
         buttonText="Shop Now"
-        buttonClass="bg-red-300 text-white hover:bg-gray-800 mt-140 w-50 "
+        buttonClass="bg-[#E74F7E] text-white hover:bg-gray-800 mt-140 w-50 "
         onButtonClick={() => console.log("Shop Now Clicked")}
         align="left"
         contentOffset="ml-5 md:ml-40"
