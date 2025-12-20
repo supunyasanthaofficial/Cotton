@@ -110,7 +110,7 @@ const Contact = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-rose-500 focus:border-rose-500 outline-none transition"
-                    placeholder="+94 000-0000"
+                    placeholder="+94 000 000 000"
                   />
                 </div>
               </div>
@@ -181,7 +181,7 @@ const Contact = () => {
                       href="tel:+10000000000"
                       className="text-black hover:text-blue-800 transition-colors"
                     >
-                      +94 000-0000
+                      +94 000 000 000
                     </a>
                   </div>
                 </div>
