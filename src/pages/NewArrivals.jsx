@@ -17,6 +17,12 @@ export default function NewArrivals() {
         images={[Header6]}
         autoSlide={false}
         height="h-[600px] md:h-[800px]"
+        showContent
+        buttonText="Shop Now"
+        buttonClass="bg-red-300 text-white hover:bg-gray-800 mt-140 w-50 "
+        onButtonClick={() => console.log("Shop Now Clicked")}
+        align="left"
+        contentOffset="ml-5 md:ml-40"
       />
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
