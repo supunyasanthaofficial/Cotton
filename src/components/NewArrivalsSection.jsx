@@ -7,7 +7,7 @@ import NA5 from "../assets/images/NA5.png";
 
 const products = [
   {
-    title: "Long Casual Dress",
+    title: "Oliver Green Long Dress",
     image: NA1,
     oldPrice: 120,
     price: 99,
@@ -19,7 +19,7 @@ const products = [
     inStock: true,
   },
   {
-    title: "Men's Office Wear",
+    title: "Cloud's Blue Men's Office ware",
     image: NA2,
     oldPrice: 150,
     price: 120,
@@ -31,7 +31,7 @@ const products = [
     inStock: true,
   },
   {
-    title: "Ladies Sandals",
+    title: "Ladies Short Skirt and Blouse",
     image: NA3,
     oldPrice: 20,
     price: 10,
@@ -43,7 +43,7 @@ const products = [
     inStock: false,
   },
   {
-    title: "Classic Hand Bag",
+    title: "Little Kids Mini Dress",
     image: NA4,
     oldPrice: 90,
     price: 70,
@@ -55,7 +55,7 @@ const products = [
     inStock: true,
   },
   {
-    title: "Men Sneakers",
+    title: "Soft Ladies Sandles",
     image: NA5,
     oldPrice: 130,
     price: 99,
@@ -67,7 +67,7 @@ const products = [
     inStock: true,
   },
   {
-    title: "Summer Top",
+    title: "Purple Maxi Dress",
     image: NA3,
     oldPrice: 60,
     price: 45,
@@ -79,7 +79,7 @@ const products = [
     inStock: true,
   },
   {
-    title: "Casual Shirt",
+    title: "Oliver Green Long Dress",
     image: NA3,
     oldPrice: 80,
     price: 65,
@@ -91,7 +91,7 @@ const products = [
     inStock: false,
   },
   {
-    title: "Leather Wallet",
+    title: "Cloud's Blue Men's Office wares",
     image: NA1,
     oldPrice: 40,
     price: 25,
@@ -103,7 +103,7 @@ const products = [
     inStock: true,
   },
   {
-    title: "Ladies Heels",
+    title: "Ladies Short Skirt and Blouse",
     image: NA2,
     oldPrice: 110,
     price: 85,
@@ -243,10 +243,10 @@ const ProductCard = ({ product }) => (
     )}
 
     <div className="h-72 bg-gray-100 flex items-center justify-center rounded-t-xl">
-      <img 
-        src={product.image} 
-        alt={product.title} 
-        className="max-h-full rounded-t-xl object-cover w-full" 
+      <img
+        src={product.image}
+        alt={product.title}
+        className="max-h-full rounded-t-xl object-cover w-full"
       />
     </div>
 
