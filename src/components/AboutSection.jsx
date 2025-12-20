@@ -4,7 +4,7 @@ import BD3 from "../assets/images/BD3.png";
 
 export default function AboutSection() {
   return (
-    <section className="w-full  bg-white py-20 ">
+    <section className="w-full bg-white py-20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
@@ -19,7 +19,7 @@ export default function AboutSection() {
               We Have 5 Years Of Experience <br />
               In Fashion Industry.
             </h2>
-            <p className="text-gray-600  max-w-lg mb-10">
+            <p className="text-gray-600 max-w-lg mb-10">
               Dress your day in cuteness! Explore everyday essentials, stylish
               outfits,and playful designs perfect for every age every moment.
             </p>
@@ -29,18 +29,18 @@ export default function AboutSection() {
                 alt="Family Fashion"
                 className="w-full rounded-2xl object-cover"
               />
-           
             </div>
           </div>
-          <div className="space-y-10">
-            <div className="relative  w-80  ">
+
+          <div className="space-y-2 flex flex-col items-center justify-center text-center">
+            <div className="relative w-80">
               <img
                 src={AS2}
                 alt="models"
                 className="rounded-2xl bg-[#c9c3e6] p-0"
               />
             </div>
-            <div className="space-y">
+            <div className="space-y-8">
               <Stat
                 number="12,000+"
                 title="Satisfied Clients"
@@ -52,14 +52,14 @@ export default function AboutSection() {
                 text="Soft tones,adorable details,and comfy silhouetters for everyone.Our clothing collection is made to make you look cute,feel confident,and shine your way."
               />
             </div>
-            <div className="w-md h-1 bg-[#8b3a32]" />
-            <div className="flex items-center gap-4">
+            <div className="w-full max-w-xs h-1 bg-[#8b3a32]" />
+            <div className="flex flex-col items-center gap-4">
               <img
                 src={BD3}
                 alt="Founder"
                 className="w-12 h-12 rounded-full object-cover"
               />
-              <div>
+              <div className="text-center">
                 <p className="font-semibold">Liyana Perera</p>
                 <p className="text-sm text-gray-500">
                   Founder Of Cotton Clouds
@@ -75,8 +75,9 @@ export default function AboutSection() {
     </section>
   );
 }
+
 const Stat = ({ number, title, text }) => (
-  <div>
+  <div className="flex flex-col items-center">
     <h3 className="text-4xl font-bold text-[#8b3a32] mb-2">{number}</h3>
     <h4 className="font-semibold mb-2">{title}</h4>
     <p className="text-gray-600 text-sm max-w-md leading-relaxed">{text}</p>
