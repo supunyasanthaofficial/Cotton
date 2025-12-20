@@ -33,7 +33,7 @@ export default function AboutSection() {
             </div>
           </div>
           <div className="space-y-10">
-            <div className="relative  w-70 ">
+            <div className="relative  w-80  ">
               <img
                 src={AS2}
                 alt="models"
