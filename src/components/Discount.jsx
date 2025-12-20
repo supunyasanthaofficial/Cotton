@@ -2,7 +2,7 @@ import D1 from "../assets/images/D1.png";
 
 const Discount = () => {
   return (
-    <section className="max-w-screen-2xl mx-auto px-4 py-20">
+    <section className="max-w-7xl mx-auto px-4 py-20">
       <div className="bg-gray-200 rounded-b-none flex flex-col lg:flex-row items-center overflow-hidden shadow-md">
         <div className="lg:w-1/2 w-full p-0">
           <div className=" rounded-4xl p-0">
@@ -31,7 +31,7 @@ const Discount = () => {
             <input
               type="email"
               placeholder="Email Addresses"
-              className="flex-1 px-4 py-3 rounded-full border-red-500 outline-none focus:ring-2 focus:ring-black"
+              className="grow px-6 py-3 border border-[#A70011] bg-white rounded-4xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition"
             />
             <button className="bg-red-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-red-700 transition">
               Sign Up
