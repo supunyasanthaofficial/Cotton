@@ -52,7 +52,7 @@ export default function About() {
             <div className="bg-pink-100 rounded-2xl p-10 flex-col justify-center text-center">
               <h2 className="text-2xl font-bold mb-4">Join Our Journey</h2>
 
-              <p className="text-gray-700 text-sm leading-relaxed mb-6">
+              <p className="text-gray-700 text-xl leading-relaxed mb-15">
                 Discover styles that make you feel beautiful inside and out.From
                 flowy dresses to cozy tops, our women's collection is all about
                 confidence,comfort,and a little sparkle in every outfit.
