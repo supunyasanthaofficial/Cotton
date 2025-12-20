@@ -11,10 +11,23 @@ export default function About() {
   return (
     <div className="relative">
       <Header
-        images={[Header5]}
-        autoSlide={false}
-        height="h-[600px] md:h-[800px]"
-      />
+  images={[Header5]}
+  height="h-[700px] md:h-[900px]"
+  showContent
+  welcomeText="Welcome to Cotton Clouds!"
+  title={
+    <>
+      TIMELESS STYLE, <br /> CONSCIOUSLY CRAFTED
+    </>
+  }
+  description="Discover clothing made to make you smile-soft fabrics, comfy fits, and stylish pieces for everyone in the family. Cute, cozy, and crafted with love."
+  buttonText="Shop Now"
+  onButtonClick={() => console.log("Shop Now Clicked")}
+  buttonClass="bg-white text-black hover:bg-gray-200 w-65 py-5 text-lg"
+
+/>
+
+
       <section>
         <div>
           <AboutSection />
