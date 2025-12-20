@@ -1,5 +1,5 @@
 // import logo from "../assets/images/logo.png";
-import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -19,10 +19,38 @@ const Footer = () => {
               and cafted with love.
             </p>
             <div className="flex space-x-4">
-              <FaFacebook className="text-2xl hover:text-blue-400 cursor-pointer" />
-              <FaInstagram className="text-2xl hover:text-pink-400 cursor-pointer" />
-              <FaTwitter className="text-2xl hover:text-blue-300 cursor-pointer" />
-              <FaYoutube className="text-2xl hover:text-red-500 cursor-pointer" />
+              <a
+                href="https://www.facebook.com/everefficient.official/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <FaFacebook className="text-2xl hover:text-blue-400 cursor-pointer" />
+              </a>
+              <a
+                href="https://www.instagram.com/ever_efficient_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram className="text-2xl hover:text-pink-400 cursor-pointer" />
+              </a>
+              <a
+                href="https://wa.me/94777644590"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <FaWhatsapp className="text-2xl hover:text-green-300 cursor-pointer" />
+              </a>
+              <a
+                href="https://www.youtube.com/results?search_query=everefficient"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+              >
+                <FaYoutube className="text-2xl hover:text-red-500 cursor-pointer" />
+              </a>
             </div>
           </div>
 
@@ -61,7 +89,7 @@ const Footer = () => {
             <h4 className="text-xl font-bold mb-4">Customer Support</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-vlack hover:text-white">
+                <a href="#" className="text-black hover:text-white">
                   Contact us
                 </a>
               </li>
