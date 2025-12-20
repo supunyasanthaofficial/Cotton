@@ -19,7 +19,7 @@ const products = [
     inStock: true,
   },
   {
-    title: "Men’s Office Wear",
+    title: "Men's Office Wear",
     image: NA2,
     oldPrice: 150,
     price: 120,
@@ -126,13 +126,13 @@ const FilterSidebar = ({
   setSelectedTypes,
   setSelectedBrands,
 }) => (
-  <aside className="border bg-white p-4 text-sm space-y-6 max-h-[100vh] overflow-y-auto">
+  <aside className="border bg-white p-4 text-sm space-y-6 sticky top-4 h-fit max-h-[calc(100vh-2rem)] overflow-y-auto rounded-xl border-gray-200">
     <h3 className="font-bold text-xl">Filter :</h3>
 
     <div>
       <p className="font-bold text-xl mb-2">Availability</p>
       <select
-        className="w-full border p-2"
+        className="w-full border p-2 rounded-lg"
         value={availability}
         onChange={(e) => setAvailability(e.target.value)}
       >
@@ -148,13 +148,13 @@ const FilterSidebar = ({
         <input
           type="number"
           placeholder="From"
-          className="border w-1/2 p-1"
+          className="border w-1/2 p-1 rounded-lg"
           onChange={(e) => setPriceFrom(e.target.value)}
         />
         <input
           type="number"
           placeholder="To"
-          className="border w-1/2 p-1"
+          className="border w-1/2 p-1 rounded-lg"
           onChange={(e) => setPriceTo(e.target.value)}
         />
       </div>
@@ -184,7 +184,7 @@ const FilterSidebar = ({
           <span
             key={s}
             onClick={() => setSelectedSize(s)}
-            className="border px-2 py-1 text-xs cursor-pointer"
+            className="border px-2 py-1 text-xs cursor-pointer rounded-md"
           >
             {s}
           </span>
@@ -231,19 +231,23 @@ const FilterSidebar = ({
 );
 
 const ProductCard = ({ product }) => (
-  <div className="border bg-white shadow-sm relative hover:shadow-md transition">
-    <span className="absolute top-0 right-0 bg-red-600 text-white text-xs px-2 py-1">
+  <div className="border bg-white shadow-sm relative hover:shadow-md transition rounded-xl overflow-hidden border-gray-200">
+    <span className="absolute top-0 right-0 bg-red-600 text-white text-xs px-2 py-1 rounded-bl-lg">
       SALE
     </span>
 
     {!product.inStock && (
-      <span className="absolute top-0 left-0 bg-gray-600 text-white text-xs px-2 py-1">
+      <span className="absolute top-0 left-0 bg-gray-600 text-white text-xs px-2 py-1 rounded-br-lg">
         OUT OF STOCK
       </span>
     )}
 
-    <div className="h-72  bg-gray-100 flex items-center justify-center">
-      <img src={product.image} alt={product.title} className="max-h-full" />
+    <div className="h-72 bg-gray-100 flex items-center justify-center rounded-t-xl">
+      <img 
+        src={product.image} 
+        alt={product.title} 
+        className="max-h-full rounded-t-xl object-cover w-full" 
+      />
     </div>
 
     <div className="p-4">
@@ -268,7 +272,7 @@ const ProductCard = ({ product }) => (
 
         <div className="flex gap-1 flex-wrap justify-end">
           {product.sizes.map((s) => (
-            <span key={s} className="border text-[10px] px-1">
+            <span key={s} className="border text-[10px] px-1 rounded-sm">
               {s}
             </span>
           ))}
@@ -278,7 +282,7 @@ const ProductCard = ({ product }) => (
   </div>
 );
 
-const NewArrivalsSection = () => {
+const FashionProductSection = () => {
   const [availability, setAvailability] = useState("all");
   const [priceFrom, setPriceFrom] = useState("");
   const [priceTo, setPriceTo] = useState("");
@@ -321,7 +325,6 @@ const NewArrivalsSection = () => {
           <option>Sort by</option>
           <option>Price: Low to High</option>
           <option>Price: High to Low</option>
-
           <option>Rating</option>
         </select>
       </div>
@@ -348,4 +351,4 @@ const NewArrivalsSection = () => {
   );
 };
 
-export default NewArrivalsSection;
+export default FashionProductSection;
