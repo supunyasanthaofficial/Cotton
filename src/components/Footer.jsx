@@ -1,5 +1,5 @@
 // import logo from "../assets/images/logo.png";
-import { FaFacebook, FaInstagram, FaTwitter, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram,  FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
