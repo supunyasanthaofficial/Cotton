@@ -54,7 +54,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-     <Snowfall
+      <Snowfall
         color="#82c3d9"
         snowflakeCount={120}
         style={{
@@ -70,10 +70,8 @@ const Home = () => {
         autoSlide={true}
         height="h-[600px] md:h-[800px]"
       />
-       
 
       <section className="max-w-7xl mx-auto px-4 py-12 text-center">
-        
         <h2 className="text-3xl md:text-4xl font-bold tracking-wide">
           DON’T MISS OUT
         </h2>
