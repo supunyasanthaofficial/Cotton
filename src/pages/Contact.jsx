@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Snowfall from "react-snowfall";
 import {
   FaEnvelope,
   FaPhone,
@@ -50,6 +51,17 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-linear-to-b from-white to-white">
+      <Snowfall
+        color="#82c3d9"
+        snowflakeCount={120}
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          zIndex: 50,
+          pointerEvents: "none",
+        }}
+      />
       <div className="bg-linear-to-r from-white to-white text-black py-16">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold mb-6">Get in Touch</h1>
