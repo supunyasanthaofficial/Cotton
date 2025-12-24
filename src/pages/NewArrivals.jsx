@@ -13,7 +13,7 @@ import NewArrivalsSection from "../components/NewArrivalsSection";
 export default function NewArrivals() {
   return (
     <div>
-         <Snowfall
+      <Snowfall
         color="#82c3d9"
         snowflakeCount={120}
         style={{
@@ -35,7 +35,7 @@ export default function NewArrivals() {
         align="left"
         contentOffset="ml-5 md:ml-40"
       />
-      
+
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
