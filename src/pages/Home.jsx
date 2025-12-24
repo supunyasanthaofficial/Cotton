@@ -17,6 +17,8 @@ import fc4 from "../assets/images/fc4.jpg";
 import TrendingProducts from "../components/TrendingProducts";
 import Discount from "../components/Discount";
 
+import Snowfall from "react-snowfall";
+
 const Home = () => {
   const brands = [
     brand1,
@@ -52,13 +54,26 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
+     <Snowfall
+        color="#82c3d9"
+        snowflakeCount={120}
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          zIndex: 50,
+          pointerEvents: "none",
+        }}
+      />
       <Header
         images={[Header1, Header2, Header3, Header4, Header5]}
         autoSlide={true}
         height="h-[600px] md:h-[800px]"
       />
+       
 
       <section className="max-w-7xl mx-auto px-4 py-12 text-center">
+        
         <h2 className="text-3xl md:text-4xl font-bold tracking-wide">
           DON’T MISS OUT
         </h2>

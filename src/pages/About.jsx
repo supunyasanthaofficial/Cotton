@@ -3,6 +3,7 @@ import Header5 from "../assets/images/Header5.png";
 import AboutSection from "../components/AboutSection";
 import WhyChooseUsSection from "../components/WhyChooseUsSection";
 import OurServicesSection from "../components/OurServicesSection";
+import Snowfall from "react-snowfall";
 
 import JS1 from "../assets/images/JS1.png";
 import JS2 from "../assets/images/JS2.png";
@@ -10,6 +11,17 @@ import JS2 from "../assets/images/JS2.png";
 export default function About() {
   return (
     <div className="relative">
+    <Snowfall
+        color="#82c3d9"
+        snowflakeCount={120}
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          zIndex: 50,
+          pointerEvents: "none",
+        }}
+      />
       <Header
   images={[Header5]}
   height="h-[700px] md:h-[900px]"

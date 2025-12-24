@@ -1,10 +1,22 @@
 import FashionProductSection from "../components/FashionProductSection";
-import BS1 from "../assets/images/BS1.png";
 import BestSalesSection from "../components/BestSalesSection";
+import Snowfall from "react-snowfall"; 
 
 export default function Fashions() {
   return (
     <>
+      <Snowfall
+        color="#82c3d9"
+        snowflakeCount={120}
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          zIndex: 50,
+          pointerEvents: "none",
+        }}
+      />
+
       <section className="w-full bg-white py-20">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">

@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-
+import Snowfall from "react-snowfall";
 import B1 from "../assets/images/B1.jpg";
 import B2 from "../assets/images/B2.png";
 import B3 from "../assets/images/B3.png";
@@ -13,6 +13,17 @@ import NewArrivalsSection from "../components/NewArrivalsSection";
 export default function NewArrivals() {
   return (
     <div>
+         <Snowfall
+        color="#82c3d9"
+        snowflakeCount={120}
+        style={{
+          position: "fixed",
+          width: "100vw",
+          height: "100vh",
+          zIndex: 50,
+          pointerEvents: "none",
+        }}
+      />
       <Header
         images={[Header6]}
         autoSlide={false}
@@ -24,6 +35,7 @@ export default function NewArrivals() {
         align="left"
         contentOffset="ml-5 md:ml-40"
       />
+      
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
