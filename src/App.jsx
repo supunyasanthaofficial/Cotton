@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import Contact from "./pages/Contact";
 import FAQ from "./pages/FAQ";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/sales" element={<Sales />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/checkout" element={<Checkout/>}/>
         </Routes>
         <Footer />
       </div>
