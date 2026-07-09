@@ -30,7 +30,6 @@ export default function Fashions() {
             always stylish.
           </p>
 
-          {/* Email + Button */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <input
               type="email"
