@@ -103,7 +103,6 @@ const Home = () => {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* Women */}
           <div className="relative w-210 h-100 right-0 overflow-hidden rounded group">
             <img
               src={fc1}
@@ -126,12 +125,10 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Sale  */}
           <div className="relative w-100 h-100 left-54 overflow-hidden rounded">
             <img src={fc3} alt="Sale" className="w-full h-full object-cover" />
           </div>
 
-          {/* Shoes */}
           <div className="relative h-120 overflow-hidden rounded">
             <img
               src={fc2}
