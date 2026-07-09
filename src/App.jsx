@@ -9,7 +9,7 @@ import Sales from "./pages/Sales";
 import Footer from "./components/Footer";
 import Navigation from "./components/Navigation";
 import Contact from "./pages/Contact";
-import FAQ from "./pages/Faq";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
