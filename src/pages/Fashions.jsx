@@ -1,6 +1,6 @@
 import FashionProductSection from "../components/FashionProductSection";
 import BestSalesSection from "../components/BestSalesSection";
-import Snowfall from "react-snowfall"; 
+import Snowfall from "react-snowfall";
 
 export default function Fashions() {
   return (
