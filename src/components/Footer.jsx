@@ -1,5 +1,5 @@
 // import logo from "../assets/images/logo.png";
-import { FaFacebook, FaInstagram,  FaWhatsapp, FaYoutube } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -89,12 +89,12 @@ const Footer = () => {
             <h4 className="text-xl font-bold mb-4">Customer Support</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#" className="text-black hover:text-white">
+                <a href="/contact" className="text-black hover:text-white">
                   Contact us
                 </a>
               </li>
               <li>
-                <a href="#" className="text-black hover:text-white">
+                <a href="/faq" className="text-black hover:text-white">
                   FAQ
                 </a>
               </li>
