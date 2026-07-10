@@ -63,8 +63,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/fashions" className="text-black hover:text-white">
+                <a href="/about-us" className="text-black hover:text-white">
                   About Us
+                </a>
+              </li>
+              <li>
+                <a href="/fashions" className="text-black hover:text-white">
+                  Fashions
                 </a>
               </li>
               <li>
@@ -74,12 +79,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/sales" className="text-black hover:text-white">
-                  Sale
-                </a>
-              </li>
-              <li>
-                <a href="/contact" className="text-black hover:text-white">
-                  Contact Us
+                  Sales
                 </a>
               </li>
             </ul>
