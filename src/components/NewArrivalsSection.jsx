@@ -4,7 +4,7 @@ import NA2 from "../assets/images/NA2.png";
 import NA3 from "../assets/images/NA3.png";
 import NA4 from "../assets/images/NA4.png";
 import NA5 from "../assets/images/NA5.png";
-
+import { Link } from "react-router-dom";
 const products = [
   {
     title: "Oliver Green Long Dress",
@@ -201,7 +201,7 @@ const FilterSidebar = ({
             className="mr-2"
             onChange={(e) =>
               setSelectedTypes((prev) =>
-                e.target.checked ? [...prev, t] : prev.filter((x) => x !== t)
+                e.target.checked ? [...prev, t] : prev.filter((x) => x !== t),
               )
             }
           />
@@ -219,7 +219,7 @@ const FilterSidebar = ({
             className="mr-2"
             onChange={(e) =>
               setSelectedBrands((prev) =>
-                e.target.checked ? [...prev, b] : prev.filter((x) => x !== b)
+                e.target.checked ? [...prev, b] : prev.filter((x) => x !== b),
               )
             }
           />
@@ -266,9 +266,12 @@ const ProductCard = ({ product }) => (
       </div>
 
       <div className="flex gap-2 justify-between items-start">
-        <button className="bg-black text-white text-xs px-6 py-2 rounded-full">
+        <Link
+          to="/checkout"
+          className="bg-black text-white text-xs px-6 py-2 rounded-full"
+        >
           Shop Now
-        </button>
+        </Link>
 
         <div className="flex gap-1 flex-wrap justify-end">
           {product.sizes.map((s) => (
