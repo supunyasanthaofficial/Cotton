@@ -64,7 +64,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/fashions" className="text-black hover:text-white">
-                  Collections
+                  About Us
                 </a>
               </li>
               <li>
