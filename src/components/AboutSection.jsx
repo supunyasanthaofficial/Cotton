@@ -66,9 +66,9 @@ export default function AboutSection() {
                 </p>
               </div>
             </div>
-            <button className="bg-[#8b3a32] hover:bg-[#732f29] text-white px-8 py-3 rounded-full transition">
+            {/* <button className="bg-[#8b3a32] hover:bg-[#732f29] text-white px-8 py-3 rounded-full transition">
               About Us More
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
