@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const ProductCard = ({ product }) => {
   return (
     <div
@@ -32,9 +33,12 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
 
-      <button className="bg-black text-white text-xs px-4 py-2 rounded-full hover:bg-gray-800 transition">
+      <Link
+        to="/checkout"
+        className="bg-black text-white text-xs px-4 py-2 rounded-full hover:bg-gray-800 transition"
+      >
         Shop Now
-      </button>
+      </Link>
     </div>
   );
 };
