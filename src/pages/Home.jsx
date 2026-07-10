@@ -16,7 +16,7 @@ import fc3 from "../assets/images/fc3.png";
 import fc4 from "../assets/images/fc4.jpg";
 import TrendingProducts from "../components/TrendingProducts";
 import Discount from "../components/Discount";
-
+import { Link } from "react-router-dom";
 import Snowfall from "react-snowfall";
 
 const Home = () => {
@@ -119,9 +119,12 @@ const Home = () => {
                 confidence is all about confidence,comfort,and a little sparkle
                 in every outfit.
               </p>
-              <button className="mt-4 w-fit px-5 py-2 bg-pink-500 text-white font-bold rounded-full text-sm hover:bg-pink-600 transition">
+              <Link
+                to="/fashions#fashion-products"
+                className="mt-4 w-fit px-5 py-2 bg-pink-500 text-white font-bold rounded-full text-sm hover:bg-pink-600 transition"
+              >
                 Explore Collection
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -153,9 +156,12 @@ const Home = () => {
                 soft fabrics,bright colors, and adorable styles made for every
                 little adventure.
               </p>
-              <button className="mt-4 w-fit px-5 py-2 bg-blue-500 text-white font-bold rounded-full text-sm hover:bg-blue-600 transition">
+              <Link
+                to="/new-arrivals#new-arrivals-section"
+                className="mt-4 w-fit px-5 py-2 bg-blue-500 text-white font-bold rounded-full text-sm hover:bg-blue-600 transition"
+              >
                 Explore Collection
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -196,9 +202,12 @@ const Home = () => {
                   perfect touch of charm to every outfit.
                 </p>
 
-                <button className="mt-4 px-8 py-3 bg-red-600 text-white rounded-full text-base font-bold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                <Link
+                  to="/sales"
+                  className="mt-4 px-8 py-3 bg-red-600 text-white rounded-full text-base font-bold hover:bg-red-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
                   Shop Now
-                </button>
+                </Link>
 
                 <div className="flex gap-4 md:gap-6 mt-8 pt-6 border-t border-gray-200">
                   <div className="text-center flex-1">
