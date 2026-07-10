@@ -31,7 +31,7 @@ export default function NewArrivals() {
         showContent
         buttonText="Shop Now"
         buttonClass="bg-[#E74F7E] text-white hover:bg-gray-800 mt-140 w-50 "
-        onButtonClick={() => console.log("Shop Now Clicked")}
+        onButtonClick={() => window.location.assign("/sales")}
         align="left"
         contentOffset="ml-5 md:ml-40"
       />
