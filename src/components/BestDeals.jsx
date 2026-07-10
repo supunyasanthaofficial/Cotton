@@ -3,6 +3,7 @@ import BD1 from "../assets/images/BD1.png";
 import BD2 from "../assets/images/BD2.png";
 import BD3 from "../assets/images/BD3.png";
 import { Link } from "react-router-dom";
+
 const products = [
   {
     title: "Long Casual Dress",
@@ -292,8 +293,10 @@ const BestDeals = () => {
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [selectedBrands, setSelectedBrands] = useState([]);
 
+  const [sortOption, setSortOption] = useState("");
+
   const filteredProducts = useMemo(() => {
-    return products.filter((p) => {
+    let filtered = products.filter((p) => {
       if (availability === "in" && !p.inStock) return false;
       if (availability === "out" && p.inStock) return false;
       if (priceFrom && p.price < priceFrom) return false;
@@ -305,6 +308,16 @@ const BestDeals = () => {
         return false;
       return true;
     });
+
+    if (sortOption === "price-low-high") {
+      filtered.sort((a, b) => a.price - b.price);
+    } else if (sortOption === "price-high-low") {
+      filtered.sort((a, b) => b.price - a.price);
+    } else if (sortOption === "rating") {
+      filtered.sort((a, b) => b.rating - a.rating);
+    }
+
+    return filtered;
   }, [
     availability,
     priceFrom,
@@ -313,6 +326,7 @@ const BestDeals = () => {
     selectedSize,
     selectedTypes,
     selectedBrands,
+    sortOption,
   ]);
 
   return (
@@ -322,12 +336,16 @@ const BestDeals = () => {
           <div className="w-12 h-1 bg-red-600 rounded-full"></div>
           <h2 className="font-semibold text-lg">Best Deals</h2>
         </div>
-        <select className="border p-2 rounded text-sm">
-          <option>Sort by</option>
-          <option>Price: Low to High</option>
-          <option>Price: High to Low</option>
 
-          <option>Rating</option>
+        <select
+          className="border p-2 rounded text-sm"
+          value={sortOption}
+          onChange={(e) => setSortOption(e.target.value)}
+        >
+          <option value="">Sort by</option>
+          <option value="price-low-high">Price: Low to High</option>
+          <option value="price-high-low">Price: High to Low</option>
+          <option value="rating">Rating</option>
         </select>
       </div>
 
