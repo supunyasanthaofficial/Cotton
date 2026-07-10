@@ -5,6 +5,7 @@ import TP6 from "../assets/images/TP6.png";
 
 import OS1 from "../assets/images/OS1.png";
 
+import { Link } from "react-router-dom";
 export default function OurServicesSection() {
   return (
     <section className="w-full bg-white py-20">
@@ -12,7 +13,7 @@ export default function OurServicesSection() {
         <div>
           <div className="flex items-center gap-3 mb-4">
             <span className="w-10 h-0.75[3px] bg-[#8B3A32] rounded-full" />
-          <span className="w-16 h-1 bg-[#8b3a32] rounded-full" />
+            <span className="w-16 h-1 bg-[#8b3a32] rounded-full" />
             <p className="text-sm font-semibold text-[#8B3A32]">Our Services</p>
           </div>
 
@@ -57,9 +58,12 @@ export default function OurServicesSection() {
             </div>
           </div>
 
-          <button className="bg-[#8B3A32] hover:bg-[#732f28] text-white px-8 py-3 rounded-full font-medium transition">
+          <Link
+            to="/fashions"
+            className="bg-[#8B3A32] hover:bg-[#732f28] text-white px-8 py-3 rounded-full font-medium transition"
+          >
             All Category
-          </button>
+          </Link>
         </div>
 
         <div className="relative flex justify-center">
