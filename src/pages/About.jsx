@@ -9,6 +9,7 @@ import JS1 from "../assets/images/JS1.png";
 import JS2 from "../assets/images/JS2.png";
 
 import { Link } from "react-router-dom";
+
 export default function About() {
   return (
     <div className="relative">
@@ -82,9 +83,12 @@ export default function About() {
                 confidence,comfort,and a little sparkle in every outfit.
               </p>
 
-              <button className="mx-auto bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full font-medium transition">
+              <Link
+                to="/contact"
+                className="mx-auto bg-pink-600 hover:bg-pink-700 text-white px-6 py-3 rounded-full font-medium transition"
+              >
                 Contact Us
-              </button>
+              </Link>
             </div>
             <div className="relative rounded-2xl overflow-hidden">
               <img
