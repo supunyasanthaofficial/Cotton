@@ -17,7 +17,7 @@ export default function Fashions() {
         }}
       />
 
-      <section className="w-full bg-white py-20">
+      {/* <section className="w-full bg-white py-20">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Join Our Fashion Club
@@ -42,7 +42,7 @@ export default function Fashions() {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
       <section>
         <div>
           <FashionProductSection />
