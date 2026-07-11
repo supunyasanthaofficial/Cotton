@@ -123,7 +123,7 @@ const Footer = () => {
 
         <div className="max-w-6xl mx-auto mt-2 pt-2 border-t border-black text-xl-center font-semibold text-center text-black text-sm">
           <p className="text-sm  mt-0-">
-            &copy; 2025 @ All Rights Reserved | Cotton Cloud | Designed &
+            &copy; 2025  All Rights Reserved  Cotton Cloud | Designed &
             Developed by{" "}
             <a
               href="https://everefficient.lk/"
